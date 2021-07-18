@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" content="IE=edge,chrome=1"/>
+    <title>demo3</title>
+</head>
+<body bgcolor=#000000>
+<pre><font color="#FFFFFF">
+ # 创建
+  ws = op.Workbook()
+  wb = ws.create_sheet(index=0)
+
+  wb.cell(row=1, column=1, value='房间名称')
+  wb.cell(row=1, column=2, value='封面照片')
+  wb.cell(row=1, column=3, value='昵称')
+  wb.cell(row=1, column=4, value='头像')
+  wb.cell(row=1, column=5, value='直播间当前人数')
+  
+  # ----------------------------------------
+  
+  # 存储
+  wb.cell(row=count, column=1, value=room_name)
+  wb.cell(row=count, column=2, value=cover_link)
+  wb.cell(row=count, column=3, value=nick)
+  wb.cell(row=count, column=4, value=prof_phot)
+  wb.cell(row=count, column=5, value=view_num)
+
+  ws.save('虎牙小姐姐.xlsx')
+</font>
+</pre>
+</body>
+</html>

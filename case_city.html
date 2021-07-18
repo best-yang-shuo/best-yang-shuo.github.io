@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+		<meta name="keyword" content="">
+		<title></title>
+		<link href="static/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="static/css/fonts.css" />
+		<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="static/js/rightcon.js"></script>
+		
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mnav">
+            <div class="beijing">
+              <div>
+                <img src="static/images/logo.png"/>
+                <nav>
+                  <ul>
+                    <li class="active"><a href="index.html"><h4>首页</h4></a></li>
+			    				<li ><a href="about.html"><h4>关于</h4></a></li>
+			    				<li ><a href="case_yx.html"><h4>爬虫</h4></a></li>
+			    				<li ><a href="service.html"><h4>IDE</h4></a></li>
+			    				<li ><a href="case-mobile.html" ><h4>伟人</h4></a></li>
+			    				<li ><a href="new-detail.html"><h4>Django</h4></a></li>
+                  </ul>
+                </nav>
+              </div>
+         
+				<ul class="childer">
+					<li>
+						<a href="case_yx.html">虎牙爬虫</a>
+					</li>
+					<li>
+						<a href="case_fx.html">成品欣赏</a>
+					</li>
+					<li>
+						<a href="case_city.html">邮件实战</a>
+					</li>
+					<li style="border: none;">
+						<a href="case_ws.html">一行代码</a>
+					</li>
+				</ul>
+            </div>
+          </header>
+          <div class="con_right">
+    		<div class="con_nav">
+    			<ul>
+    				<li class="icon-chevron-up"></li>
+    				<li class="icon-contact"></li>
+    				<li class="icon-wechat"></li>
+    				<li class="icon-chevron-down"></li>
+    			</ul>
+    			<a class="icon-cancel-circle"></a>
+    		</div>
+    		<div class="con_intr">
+	    		<div class="con_pho">
+	    			<p>17613797241</p>
+	    		</div>
+	    		<div class="con_gw">
+	    			<img src="static/images/gw.jpg"/>
+	    		</div>
+    		</div>
+    	</div>
+          <section class="baer">
+          	<img src="static/images/city/QQ浏览器截图20210717184620.png" width="100%">
+          </section>
+		<div class="city">
+			<div class="city_top">
+				<a class=""><img src="static/images/city/sc.png"></a><span style="position: absolute;"><strong> <h2>人人都能懂的 Python 自动发送邮件实战教程</h2>
+				</strong><br><br><br><h3>1.开启SMTP服务</h3><br><br><br><h3>2.准备</h3>
+				<br><br><br><h3>3.编写脚本</h3><br><br><br><h3>4.小例子</h3>
+					</span>
+					
+				<!-- <img src="static/images/这兔兔好白.jpg"> -->
+				<div class="city_right">
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<a class="sjx"><img src="static/images/city/sjx.png" /></a>
+		</div>
+	
+<style> 
+.divcss5{text-align:center} 
+</style> 
+
+
+
+
+
+		<!---->
+		<div class="case_about">
+			<h3 style="text-align: center;">开始实战</h3>
+			<div class="border_top">
+				<div class="border" style="padding-bottom: 0px;">
+					<div class="case_about">
+						<h3>1.开启SMTP服务</h3>
+						<div class="border_top">
+							<div class="border" style="padding-bottom: 0px;">
+								<h4>为了实现自动发送邮件的目的，我们需要在邮箱中开启SMTP服务：</h4><br>
+								<img src="static/images/city/640.webp"><br><br>
+								<h4>开启SMTP，否则邮件是无法发送成功的。</h4><br>
+								<img src="static/images/city/640.png"><br><br>
+								<h4>邮箱设定成功后，开始脚本开发。</h4>
+							</div>
+						</div>
+				</div>
+				<div class="case_about">
+				<h3>2.准备</h3>
+				<div class="border_top">
+					<div class="border" style="padding-bottom: 0px;">
+						<h4>开始之前，确保Python和pip已经成功安装在电脑上。
+							<br><br>
+							(可选1) 可以直接安装Anaconda：Python数据分析与挖掘好帮手—Anaconda，它内置了Python和pip.
+							<br><br>
+							(可选2) 用VSCode编辑器，它有许多的优点：Python 编程的最好搭档—VSCode 详细指南。
+							<br><br>
+							请选择以下任一种方式输入命令安装依赖：<br><br>
+							1. Windows 环境 打开 Cmd (开始-运行-CMD)。<br><br>
+							2. MacOS 环境 打开 Terminal (command+空格输入Terminal)。<br><br>
+							3. Pycharm，可以直接使用界面下方的Terminal.</h4><br>
+						<img src="static/images/city/屏幕截图 2021-07-17 182412.png" width="75%"><br><br>
+						
+					</div>
+				</div>
+		</div>
+		<div class="case_about">
+			<h3>3.编写脚本</h3>
+			<div class="border_top">
+				<div class="border" style="padding-bottom: 0px;">
+					<h4>用yagmail模块，一个非常方便的Python邮件发送模块，用这个模块，你甚至能一行命令发送邮件：</h4><br>
+					<img src="static/images/city/20210717182003.png"><br><br>
+					<h4>让这个发送邮件的方法更加具备可用性，将其封装到一个类中：</h4><br>
+					<img src="static/images/city/QQ浏览器截图20210717182610.png"><br><br>
+					<h4>这个类里还可以封装log函数，用于显示时间：</h4><br>
+					<img src="static/images/city/QQ浏览器截图20210717182745.png"><br><br>
+					<h4>发送成功时显示：</h4><br>
+					<img src="static/images/city/QQ浏览器截图20210717182941.png">
+				</div>
+			</div>
+		</div>
+		<div class="case_about">
+			<h3>4.小例子</h3>
+			<div class="border_top">
+				<div class="border" style="padding-bottom: 0px;">
+					<h4>尝试一个小例子,用一个自动监控网站是否宕机的小脚本做示例：</h4><br>
+					<img src="static/images/city/QQ浏览器截图20210717183125.png"><br><br>
+					<h4>通过 requests.get 请求网站，使用 response.status_code 得到状态码，200 为正常，其他情况均为异常。
+						<br><br>
+					这个检测每十分钟运行一次，因此 time.sleep(600) .</h4><br>
+					<img src="static/images/city/QQ浏览器截图20210717183245.png"><br><br>
+			
+					
+				</div>
+			</div>
+		</div>
+		<img src="static/images/city/end6.jpg">
+	</div>
+			</div>
+		</div>
+	</div>
+
+		<!--尾部-->
+		<footer>
+			<section class="footera">
+				<div class="footera-article">
+					<div class="footera-sa"><span>＜</span></div>
+					<div class="footera-sm">
+						<ul class="clear_float">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="about.html">关于</a>
+							</li>
+							<li>
+								<a href="case_yx.html">爬虫</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);"><img src="static/images/logoa.png"></a>
+							</li>
+							<li>
+								<a href="service.html">IDE</a>
+							</li>
+							<li>
+								<a href="case-pc.html">伟人</a>
+							</li>
+							<li>
+								<li ><a href="new-detail.html">Django</a></li>
+							</li>
+						</ul>
+					</div>
+					<div class="footera-sg">
+						<p class="footera-sgp">18物联网01&nbsp;&nbsp;&nbsp;联系电话：17613797241&nbsp;&nbsp;&nbsp;地址：河南牧业经济学院(英才校区)</p>
+            <p class="footera_p">@2021 best-share.top</p>
+
+					</div>
+				</div>
+			</section>
+		</footer>
+	</body>
+
+</html>

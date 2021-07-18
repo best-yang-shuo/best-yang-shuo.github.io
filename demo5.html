@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" content="IE=edge,chrome=1"/>
+    <title>demo3</title>
+</head>
+<body bgcolor=#000000>
+<pre><font color="#FFFFFF">
+ for num, (pic_img, pic_name) in enumerate(save_pic):
+      r = requests.get(pic_img)
+      pic = r.content
+      try:
+          with open('./pictures/{}.jpg'.format(pic_name), 'wb') as fin:
+              print(f'正在爬取第{count}张图片')
+              fin.write(pic)
+              print('{}.jpg----下载成功'.format(pic_name))
+      except:
+          print('下载失败！')
+</font>
+</pre>
+</body>
+</html>

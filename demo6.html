@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" content="IE=edge,chrome=1"/>
+    <title>demo3</title>
+</head>
+<body bgcolor=#000000>
+<pre><font color="#FFFFFF">
+# 设置心性图片矩阵
+    HEART = [[0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0],
+             [0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0],
+             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+             [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+             [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+             [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]]
+
+    # 定义相关参数
+    SIZE = 100  # 每张图片的尺寸，越大越清晰
+    N = 1  # 每个点位上放置1*1张图片
+
+    # 计算相关参数
+    width = np.shape(HEART)[1] * N * SIZE  # 照片墙宽度
+    height = np.shape(HEART)[0] * N * SIZE  # 照片墙高度
+    n_img = np.sum(HEART) * (N ** 2)  # 照片墙需要的照片数
+    filenames = random.sample(os.listdir(save_path), n_img)  # 随机选取n_img张照片
+    filenames = [save_path + f for f in filenames]
+
+    print('开始集合！')
+    # 绘制爱心墙
+    img_bg = Image.new('RGB', (width, height))  # 设置照片墙背景
+    i = 0
+    for y in range(np.shape(HEART)[0]):
+        for x in range(np.shape(HEART)[1]):
+            if HEART[y][x] == 1:  # 如果需要填充
+                pos_x = x * N * SIZE  # 填充起始X坐标位置
+                pos_y = y * N * SIZE  # 填充起始Y坐标位置
+                for yy in range(N):
+                    for xx in range(N):
+                        img = Image.open(filenames[i])
+                        img = img.resize((SIZE, SIZE), Image.ANTIALIAS)
+                        img_bg.paste(img, (pos_x + xx * SIZE, pos_y + yy * SIZE))
+                        i += 1
+    # 保存图片
+    img_bg.save('love.jpg')
+    print('集合完毕！')
+</font>
+</pre>
+</body>
+</html>

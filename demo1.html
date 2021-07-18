@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" content="IE=edge,chrome=1"/>
+    <title>demo1</title>
+</head>
+<body bgcolor=#000000>
+<pre><font color="#FFFFFF">
+url = f'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&gameId=2168&tagAll=0&callback=getLiveListJsonpCallback&page={page}'
+
+headers = {
+	  'cookie': '__yamid_tt1=0.17768755672559844; __yamid_new=C9662ED452B00001997340851CC8140B; game_did=j7Os0i0Txedw1cLUtP0vmKnalM1x65kO3rE; SoundValue=0.50; alphaValue=0.80; guid=0a42cb71a121c360e701bcfbbdfb20c9; udb_guiddata=b45f59af594a4e83cde65858; udb_anouid=1461170529732; isInLiveRoom=true; Hm_lvt_51700b6c722f5cf39906a596ea41f=1623400798,1624888823,1624928362; udb_passdata=3; __yasmid=0.17768755672559844; _yasids=__rootsid%3DC96BDFA246600001458617807F641C12; Hm_lpvt_51700b6c722f5bb4cf39906a596ea41f=1624928418; huya_web_rep_cnt=137',
+	  'referer': 'https://www.huya.com/g/2168',
+	  'user-agent': str(UserAgent().random)
+	  }
+try:
+    resp = requests.get(url, headers = headers)
+    print(resp.text)
+</font>
+</pre>
+</body>
+</html>
